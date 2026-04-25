@@ -180,14 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const particles = [];
         // Cores solicitadas: Azul, Verde, Amarelo(Dourado), Rosa
         const colors = ['#AEC6CF', '#98FF98', '#F3E5AB', '#FFB6C1'];
-        const particleCount = 120;
+        const particleCount = 50; // Reduzido drasticamente para alta performance (estava 120, o que gerava 7000 cálculos por frame)
 
         for (let i = 0; i < particleCount; i++) {
             particles.push({
                 x: Math.random() * width,
                 y: Math.random() * height,
-                speedX: (Math.random() - 0.5) * 0.4,
-                speedY: (Math.random() - 0.5) * 0.4,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5,
                 size: 1.5 + Math.random() * 2,
                 color: colors[Math.floor(Math.random() * colors.length)],
                 alpha: 0.3 + Math.random() * 0.5
@@ -210,19 +210,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fillStyle = p.color;
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = p.color;
-                ctx.fill();
+                ctx.fill(); // Removido shadowBlur que destrói a GPU no mobile
             });
 
-            // Conexões fracas de DNA entre pontos próximos
+            // Conexões fracas de DNA entre pontos próximos (Otimizado)
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const distSq = dx * dx + dy * dy;
 
-                    if (dist < 100) {
+                    // 10000 = 100^2 (Evita Math.sqrt, que é muito pesado)
+                    if (distSq < 10000) {
+                        const dist = Math.sqrt(distSq);
                         ctx.beginPath();
                         ctx.strokeStyle = particles[i].color;
                         ctx.globalAlpha = 0.15 * (1 - dist / 100);
