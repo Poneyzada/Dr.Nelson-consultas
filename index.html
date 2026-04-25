@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     
     <!-- MapLibre GL -->
     <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
-    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js" defer></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -36,7 +36,7 @@
     <!-- HERO SECTION -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="imagem-home.jpg" alt="Dr. Nelson" class="hero-img">
+            <img src="imagem-home.jpg" alt="Dr. Nelson" class="hero-img" width="1080" height="1350" fetchpriority="high">
             <div class="hero-overlay"></div>
         </div>
         
@@ -65,7 +65,7 @@
         
         <div class="container apresentacao-container" style="position: relative; z-index: 1;">
             <div class="apresentacao-img-wrapper" data-anime="fade-right">
-                <img src="imagem-sobre-dr.jpg" alt="Dr. Nelson Avaliação" class="apresentacao-img">
+                <img src="imagem-sobre-dr.jpg" alt="Dr. Nelson Avaliação" class="apresentacao-img" width="800" height="1000" loading="lazy">
                 <div class="gold-border"></div>
             </div>
             <div class="apresentacao-content" data-anime="fade-left">
@@ -146,7 +146,7 @@
 
             <div class="servicos-container">
                 <div class="servicos-img-wrapper" data-anime="fade-right">
-                    <img src="imagem-serviços.jpg" alt="Serviços Dr. Nelson" class="servicos-img">
+                    <img src="imagem-serviços.jpg" alt="Serviços Dr. Nelson" class="servicos-img" width="1280" height="720" loading="lazy">
                     <div class="gold-gradient-overlay"></div>
                 </div>
 
