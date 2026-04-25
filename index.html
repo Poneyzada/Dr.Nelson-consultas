@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nelson | Cuidado Completo para sua Saúde</title>
+    <meta name="description" content="Acompanhamento médico personalizado para pacientes que buscam mais equilíbrio, bem-estar e prevenção. Foco em obesidade, diabetes, menopausa e mais.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- MapLibre GL -->
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-text">Dr. Nelson</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-open-modal">Agendar Consulta</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="imagem-home.jpg" alt="Dr. Nelson" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content" data-anime="fade-up">
+                <span class="badge">Dr. Nelson</span>
+                <h1 class="hero-title">Cuidado completo para sua <span class="highlight">saúde</span>, metabolismo e <span class="highlight">qualidade de vida</span></h1>
+                <p class="hero-desc">
+                    Acompanhamento médico personalizado para pacientes que buscam mais equilíbrio, bem-estar e prevenção, com foco em obesidade, diabetes, menopausa, hipogonadismo masculino, doenças da tireoide, além de exames e terapias complementares.
+                </p>
+                <div class="hero-location">
+                    <i class="ph ph-map-pin"></i>
+                    <span>Atendimento em: Senhor do Bonfim, Filadélfia, Itiúba, Queimadas e Nordestina.</span>
+                </div>
+                <div class="hero-ctas">
+                    <button class="btn btn-primary btn-open-modal">Agendar Consulta</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: APRESENTAÇÃO -->
+    <section class="apresentacao section-padding" id="apresentacao" style="position: relative; overflow: hidden;">
+        <!-- Canvas Partículas DNA -->
+        <canvas id="apresentacao-canvas" class="apresentacao-canvas"></canvas>
+        
+        <div class="container apresentacao-container" style="position: relative; z-index: 1;">
+            <div class="apresentacao-img-wrapper" data-anime="fade-right">
+                <img src="imagem-sobre-dr.jpg" alt="Dr. Nelson Avaliação" class="apresentacao-img">
+                <div class="gold-border"></div>
+            </div>
+            <div class="apresentacao-content" data-anime="fade-left">
+                <h2 class="section-title">Atendimento individualizado para quem deseja cuidar da saúde de forma <span class="highlight">completa</span></h2>
+                <div class="divider"></div>
+                <p>O Dr. Nelson oferece uma abordagem médica focada em acompanhamento clínico, avaliação metabólica, equilíbrio hormonal, exames especializados e tratamentos complementares.</p>
+                <p>Cada paciente é atendido de forma única, com atenção às suas necessidades, sintomas, histórico de saúde e objetivos, para um cuidado mais assertivo e humanizado.</p>
+                <button class="btn btn-primary mt-4 btn-open-modal">Quero agendar meu atendimento</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: PARA QUEM É -->
+    <section class="para-quem section-padding bg-darker" id="para-quem">
+        <div class="container text-center">
+            <h2 class="section-title" data-anime="fade-up">Para quem o atendimento do Dr. Nelson é <span class="highlight">indicado?</span></h2>
+            <p class="section-subtitle" data-anime="fade-up">O atendimento é ideal para pessoas que desejam:</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.1s;">
+                    <div class="icon-box"><i class="ph ph-scales"></i></div>
+                    <h3>Tratar ou controlar a obesidade</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.2s;">
+                    <div class="icon-box"><i class="ph ph-drop"></i></div>
+                    <h3>Fazer acompanhamento de diabetes</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.3s;">
+                    <div class="icon-box"><i class="ph ph-gender-female"></i></div>
+                    <h3>Cuidar da saúde durante a menopausa</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.4s;">
+                    <div class="icon-box"><i class="ph ph-gender-male"></i></div>
+                    <h3>Investigar e tratar hipogonadismo masculino</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.5s;">
+                    <div class="icon-box"><i class="ph ph-activity"></i></div>
+                    <h3>Acompanhar doenças da tireoide</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.6s;">
+                    <div class="icon-box"><i class="ph ph-heart-beat"></i></div>
+                    <h3>Melhorar a saúde metabólica</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.7s;">
+                    <div class="icon-box"><i class="ph ph-magnifying-glass-plus"></i></div>
+                    <h3>Realizar exames para avaliação do organismo</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.8s;">
+                    <div class="icon-box"><i class="ph ph-moon"></i></div>
+                    <h3>Investigar alterações do sono e respiração</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 0.9s;">
+                    <div class="icon-box"><i class="ph ph-stomach"></i></div>
+                    <h3>Avaliar a saúde intestinal</h3>
+                </div>
+                <div class="benefit-card" data-anime="zoom-in" style="transition-delay: 1.0s;">
+                    <div class="icon-box"><i class="ph ph-person"></i></div>
+                    <h3>Tratar a queda capilar</h3>
+                </div>
+            </div>
+
+            <div class="alert-box" data-anime="fade-up">
+                <i class="ph-fill ph-warning-circle"></i>
+                <p>Se você busca um atendimento sério, personalizado e voltado para resultados reais, o Dr. Nelson pode ajudar.</p>
+            </div>
+
+            <button class="btn btn-primary mt-4 btn-open-modal" data-anime="fade-up">Agende sua consulta agora</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: SERVIÇOS -->
+    <section class="servicos section-padding" id="servicos">
+        <div class="container">
+            <div class="text-center mb-5" data-anime="fade-up">
+                <h2 class="section-title">Serviços <span class="highlight">Oferecidos</span></h2>
+                <div class="divider mx-auto"></div>
+            </div>
+
+            <div class="servicos-container">
+                <div class="servicos-img-wrapper" data-anime="fade-right">
+                    <img src="imagem-serviços.jpg" alt="Serviços Dr. Nelson" class="servicos-img">
+                    <div class="gold-gradient-overlay"></div>
+                </div>
+
+                <div class="accordion-wrapper" data-anime="fade-left">
+                    <!-- Serviço 1 -->
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <span class="number">01</span>
+                            <h3>Acompanhamento para saúde metabólica e hormonal</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Acompanhamento médico para pacientes com:</p>
+                            <ul class="check-list">
+                                <li><i class="ph-fill ph-check-circle"></i> Obesidade</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Diabetes</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Menopausa</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Hipogonadismo Masculino</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Doenças da Tireoide</li>
+                            </ul>
+                            <p class="mt-2">Tratamento com foco em controle, equilíbrio e melhora da qualidade de vida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">02</span>
+                            <h3>Terapias Nutricionais e Injetáveis</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Tratamentos complementares que podem auxiliar no suporte nutricional, metabolismo, disposição e bem-estar, sempre conforme avaliação individual.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">03</span>
+                            <h3>Avaliação Metabólica</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Exames que ajudam a entender melhor como seu corpo funciona, permitindo estratégias mais precisas para saúde e acompanhamento.</p>
+                            <div class="sub-service">
+                                <strong>Bioimpedância:</strong> avalia composição corporal, como massa magra, percentual de gordura e retenção hídrica.
+                            </div>
+                            <div class="sub-service">
+                                <strong>Calorimetria Indireta:</strong> mede o gasto energético em repouso, auxiliando no planejamento de condutas mais assertivas.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">04</span>
+                            <h3>Polissonografia</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Exame importante para investigar alterações relacionadas ao sono, contribuindo para uma avaliação mais completa da saúde e da qualidade de vida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 5 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">05</span>
+                            <h3>Espirometria</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Exame utilizado para avaliação da função pulmonar, auxiliando no monitoramento da saúde respiratória.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 6 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">06</span>
+                            <h3>Testes Genéticos de Microbiota Intestinal</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Uma avaliação moderna que ajuda a compreender melhor o papel do intestino na saúde, no metabolismo e no bem-estar geral.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 7 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="number">07</span>
+                            <h3>Tratamentos para Queda Capilar</h3>
+                            <i class="ph ph-caret-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <p>Investigação e tratamento direcionados para pacientes que sofrem com queda de cabelo e buscam uma abordagem individualizada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-anime="fade-up">
+                <button class="btn btn-outline btn-open-modal">Falar com a equipe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: DIFERENCIAIS -->
+    <section class="diferenciais section-padding bg-darker" id="diferenciais">
+        <div class="container text-center">
+            <h2 class="section-title" data-anime="fade-up">Por que escolher o atendimento do <span class="highlight">Dr. Nelson?</span></h2>
+            <div class="divider mx-auto mb-5"></div>
+            
+            <div class="diff-grid">
+                <div class="diff-card" data-anime="fade-up" style="transition-delay: 0.1s;">
+                    <i class="ph ph-users-three diff-icon"></i>
+                    <h3>Atendimento personalizado</h3>
+                    <p>Cada paciente recebe uma avaliação individual, com foco nas suas necessidades e objetivos.</p>
+                </div>
+                <div class="diff-card" data-anime="fade-up" style="transition-delay: 0.2s;">
+                    <i class="ph ph-yin-yang diff-icon"></i>
+                    <h3>Visão integral da saúde</h3>
+                    <p>O cuidado vai além dos sintomas, buscando entender as causas e promover mais equilíbrio para o organismo.</p>
+                </div>
+                <div class="diff-card" data-anime="fade-up" style="transition-delay: 0.3s;">
+                    <i class="ph ph-stethoscope diff-icon"></i>
+                    <h3>Exames e acompanhamento</h3>
+                    <p>Além do atendimento clínico, o paciente pode contar com avaliações e exames importantes para um acompanhamento mais completo.</p>
+                </div>
+                <div class="diff-card" data-anime="fade-up" style="transition-delay: 0.4s;">
+                    <i class="ph ph-shield-plus diff-icon"></i>
+                    <h3>Foco em prevenção e qualidade de vida</h3>
+                    <p>O objetivo é ajudar o paciente a viver com mais saúde, disposição e segurança.</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-5 btn-open-modal" data-anime="fade-up">Quero marcar minha consulta</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: CIDADES -->
+    <section class="cidades section-padding" id="cidades">
+        <div class="container text-center">
+            <div class="cidade-content" data-anime="zoom-in" style="max-width: 1000px;">
+                <i class="ph-fill ph-map-pin-line section-icon"></i>
+                <h2 class="section-title">Cidades onde o Dr. Nelson <span class="highlight">atende</span></h2>
+                
+                <p class="mt-4 mb-5">Se você mora em uma dessas regiões, agende seu atendimento e tenha acompanhamento médico com mais praticidade e confiança.</p>
+                
+                <!-- MAPA INTERATIVO -->
+                <div id="clinics-map" style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.2);"></div>
+                
+                <button class="btn btn-outline mt-5 btn-open-modal">Ver disponibilidade de atendimento</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 6: CHAMADA FINAL -->
+    <section class="cta-final section-padding" id="agendar">
+        <div class="cta-bg-glow"></div>
+        <div class="container text-center relative z-10" data-anime="fade-up">
+            <h2 class="section-title">Sua saúde merece acompanhamento <span class="highlight">especializado</span></h2>
+            <p class="cta-text">Se você precisa de acompanhamento para obesidade, diabetes, menopausa, hipogonadismo masculino, doenças da tireoide, ou deseja realizar exames e tratamentos complementares com atenção individualizada, o Dr. Nelson está pronto para cuidar de você.</p>
+            
+            <div class="cta-highlight-box mt-4 mb-4">
+                <strong>Não deixe sua saúde para depois.</strong><br>
+                Dê o próximo passo em direção ao seu bem-estar.
+            </div>
+
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-lg w-full-mobile btn-open-modal">Agendar Consulta</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Dr. Nelson</span>
+                    <p>Atendimento médico com foco em saúde metabólica, hormonal e qualidade de vida.</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Cidades de atendimento:</h4>
+                    <p>Senhor do Bonfim | Filadélfia | Itiúba | Queimadas | Nordestina</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Entre em contato e agende seu atendimento.</p>
+                    <button class="btn btn-sm btn-outline mt-2 btn-open-modal">Agendar Agora</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Dr. Nelson. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL ICP -->
+    <div class="modal-overlay" id="icp-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="btn-close-modal"><i class="ph ph-x"></i></button>
+            <div class="modal-header">
+                <h3>Agendar Atendimento</h3>
+                <p>Para um atendimento mais personalizado, nos conte um pouco sobre você.</p>
+            </div>
+            <form id="icp-form" class="icp-form">
+                <div class="form-group">
+                    <label for="icp-name">Qual o seu nome?</label>
+                    <input type="text" id="icp-name" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="icp-interest">Qual o seu principal interesse?</label>
+                    <select id="icp-interest" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Obesidade e Emagrecimento">Obesidade e Emagrecimento</option>
+                        <option value="Diabetes">Acompanhamento de Diabetes</option>
+                        <option value="Menopausa">Menopausa</option>
+                        <option value="Hipogonadismo">Hipogonadismo Masculino</option>
+                        <option value="Tireoide">Doenças da Tireoide</option>
+                        <option value="Exames e Avaliação">Exames Metabólicos / Polissonografia</option>
+                        <option value="Queda Capilar">Tratamento para Queda Capilar</option>
+                        <option value="Outros">Outros tratamentos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="icp-city">Cidade de Atendimento</label>
+                    <select id="icp-city" required>
+                        <option value="" disabled selected>Selecione a cidade desejada</option>
+                        <option value="Ainda não sei / Online">Ainda não decidi / Online</option>
+                        <option value="Senhor do Bonfim">Senhor do Bonfim</option>
+                        <option value="Filadélfia">Filadélfia</option>
+                        <option value="Itiúba">Itiúba</option>
+                        <option value="Queimadas">Queimadas</option>
+                        <option value="Nordestina">Nordestina</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-full-mobile mt-4">Continuar para o WhatsApp <i class="ph ph-whatsapp-logo"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
