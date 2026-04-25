@@ -238,4 +238,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         animateCanvas();
     }
+
+    // 7. MENU DE NAVEGAÇÃO
+    const btnMenu = document.getElementById('btn-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if(btnMenu && navMenu) {
+        btnMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            const icon = btnMenu.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('ph-dots-three-outline-vertical');
+                icon.classList.add('ph-x');
+            } else {
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-dots-three-outline-vertical');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = btnMenu.querySelector('i');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-dots-three-outline-vertical');
+            });
+        });
+    }
 });

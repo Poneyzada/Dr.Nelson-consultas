@@ -223,12 +223,92 @@ img {
     height: 70px;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.btn-menu {
+    background: transparent;
+    border: none;
+    color: var(--color-text-main);
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    padding: 0.2rem;
+}
+
+.btn-menu:hover {
+    color: var(--color-gold-primary);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo i {
+    color: var(--color-gold-primary);
+    font-size: 1.5rem;
+}
+
 .logo-text {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-gold-primary);
     letter-spacing: 1px;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(5, 5, 5, 0.98);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 99;
+}
+
+.nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem var(--container-padding);
+}
+
+.nav-link {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--color-gold-primary);
+    padding-left: 0.5rem;
 }
 
 /* HERO SECTION */
