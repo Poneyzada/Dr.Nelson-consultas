@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const interest = document.getElementById('icp-interest').value;
         const city = document.getElementById('icp-city').value;
         
-        // Número do WhatsApp (substitua pelo número correto do Dr. Nelson, ex: 5511999999999)
-        const phoneNumber = "5511999999999"; 
+        // Número do WhatsApp oficial (Dr. Nelson)
+        const phoneNumber = "557592606168"; 
         
         const message = `Olá, vim pelo site! Meu nome é *${name}* e tenho interesse em acompanhamento para: *${interest}*.\nGostaria de agendar atendimento em: *${city}*.`;
         
